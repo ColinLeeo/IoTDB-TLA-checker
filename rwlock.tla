@@ -1,11 +1,8 @@
 ------------------------------- MODULE rwlock -------------------------------
 EXTENDS Integers, Sequences
 
-\* 读写锁的变量
 VARIABLES readers, waitingWriters, writer, queue
 
-\* 初始状态
-\* 读者的数量为 0，是否有进程等待写锁，queue 表示等待写锁的队列
 Init ==
     /\ readers = 0
     /\ waitingWriters = 0
@@ -13,7 +10,7 @@ Init ==
     /\ queue = <<>>
     
 TryAcquireRLock ==
-    /\ waitingWriters = 0 \* 没有写请求时，才允许获取读锁
+    /\ waitingWriters = 0 
     /\ writer = FALSE
     /\ readers' = readers + 1
     /\ queue' = queue
@@ -21,7 +18,7 @@ TryAcquireRLock ==
 
 TryAcquireWLock ==
     /\ writer = FALSE
-    /\ readers = 0 \* 没有写操作
+    /\ readers = 0
     /\ waitingWriters' = waitingWriters - 1
     /\ writer' = TRUE
     /\ UNCHANGED readers
@@ -39,12 +36,11 @@ ReleaseWLock ==
    /\ UNCHANGED readers
    /\ queue' = Tail(queue)
 
-\* 行为定义
 Next ==
     \/ TryAcquireRLock
-\*    \/ ReleaseRLock
-\*    \/ TryAcquireWLock
-\*    \/ ReleaseWLock
+    \/ ReleaseRLock
+    \/ TryAcquireWLock
+    \/ ReleaseWLock
 
 Spec == Init /\ [][Next]_<<readers, waitingWriters, writer, queue>>
 

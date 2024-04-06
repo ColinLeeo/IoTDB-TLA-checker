@@ -1,0 +1,37 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 129 and seed 8998727630777879324 with 1 worker on 20 cores with 9035MB heap and 64MB offheap memory (Windows 11 10.0 amd64, Oracle Corporation 1.8.0_391 x86_64, MSBDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file D:\project\IoTDB-LTA-PLUS\examples\test.tla
+Parsing file D:\project\IoTDB-LTA-PLUS\examples\DieHard.tla
+Parsing file C:\Users\18367\AppData\Local\Temp\Integers.tla
+Parsing file C:\Users\18367\AppData\Local\Temp\Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module DieHard
+Semantic processing of module test
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2024-04-03 20:37:19)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2102:1 @!@!@
+current state is not a legal state
+While working on the initial state:
+/\ a = 10
+/\ big = null
+/\ small = null
+
+@!@!@ENDMSG 2102 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 730ms at (2024-04-03 20:37:20)
+@!@!@ENDMSG 2186 @!@!@
