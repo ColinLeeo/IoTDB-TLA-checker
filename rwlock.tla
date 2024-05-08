@@ -1,4 +1,4 @@
-------------------------------- MODULE rwlock -------------------------------
+------------------------------- MODULE rwLock -------------------------------
 EXTENDS Integers, Sequences
 
 VARIABLES readers, waitingWriters, writer, queue
@@ -51,5 +51,5 @@ TypeInvariant ==
 
 =============================================================================
 \* Modification History
-\* Last modified Mon Apr 01 01:08:33 CST 2024 by 18367
+\* Last modified Wed May 08 17:32:21 CST 2024 by 18367
 \* Created Mon Apr 01 00:32:31 CST 2024 by 18367

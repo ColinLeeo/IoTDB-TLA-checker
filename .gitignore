@@ -1,0 +1,3 @@
+*.out
+*.toolbox/*
+*toolbox/.project
